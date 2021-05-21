@@ -14,4 +14,7 @@
 */
 
 $router->get('/', 'BackendController@index');
+$router->post('/api/states', 'BackendController@getStates');
+$router->post('/api/states/{id}/districts', 'BackendController@getDistrictByState');
 $router->post('/api/sessions/pin', 'BackendController@getSessionsByPin');
+$router->post('/api/sessions/district', 'BackendController@getSessionsByDistrict');
